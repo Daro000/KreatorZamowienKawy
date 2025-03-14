@@ -150,5 +150,6 @@
         android:textColor="#D5C8C8"
         android:backgroundTint="#834832"
         android:textSize="18dp"
+        android:layout_gravity="center"
         />
 </LinearLayout>

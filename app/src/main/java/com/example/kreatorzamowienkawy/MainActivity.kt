@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val myTextView = findViewById<TextView>(R.id.ilosc)
 
-        val mySeekBar : SeekBar = findViewById(R.id.seekbar)
-        mySeekBar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+        val mySeekBar: SeekBar = findViewById(R.id.seekbar)
+        mySeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 myTextView.text = "$p1"
             }
@@ -34,5 +34,6 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
 
             }
-        }
+        })
+    }
 }
