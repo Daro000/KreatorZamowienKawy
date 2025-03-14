@@ -6,15 +6,50 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Zamow Przepyszna Kawe:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25dp"
+        />
+
+
+
+        <RadioGroup
+            android:id="@+id/rkawy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="start"
+            >
+
+
+            <RadioButton
+                android:id="@+id/kawa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="espresso" />
+
+            <RadioButton
+                android:id="@+id/kawa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="capucciono" />
+
+            <RadioButton
+                android:id="@+id/kawa3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="latte" />
+
+        </RadioGroup>
 
 </LinearLayout>
