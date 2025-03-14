@@ -11,17 +11,30 @@
     >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="#EBC0B6"
         android:text="Zamow Przepyszna Kawe:"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textSize="25dp"
+        android:textAlignment="center"
+        android:padding="10dp"
         />
 
 
+    <TextView
+        android:layout_width="177dp"
+        android:layout_height="63dp"
+        android:background="#834832"
+        android:text="Rodzaj kawy:"
+        android:textSize="21dp"
+        android:textAlignment="center"
+        android:textColor="#D5C8C8"
+        android:padding="10dp"
+        />
 
         <RadioGroup
             android:id="@+id/rkawy"
@@ -29,6 +42,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_gravity="start"
+            android:background="#EBC0B6"
             >
 
 
@@ -52,4 +66,17 @@
 
         </RadioGroup>
 
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mleko"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cukier"
+    />
 </LinearLayout>
