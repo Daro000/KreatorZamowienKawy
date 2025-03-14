@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:background="#EBC0B6"
-        android:text="Zamow Przepyszna Kawe:"
+        android:text="Zamow pyszna kawusie:"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,24 +26,28 @@
 
 
     <TextView
-        android:layout_width="177dp"
+        android:layout_width="match_parent"
         android:layout_height="63dp"
         android:background="#834832"
-        android:text="Rodzaj kawy:"
-        android:textSize="21dp"
+        android:padding="10dp"
+        android:text="Rodzaj kawy: "
         android:textAlignment="center"
         android:textColor="#D5C8C8"
-        android:padding="10dp"
-        />
+        android:textSize="21dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
 
         <RadioGroup
             android:id="@+id/rkawy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:layout_width="189dp"
+            android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="#EBC0B6"
-            >
+            android:padding="10dp">
 
 
             <RadioButton
@@ -56,27 +60,58 @@
                 android:id="@+id/kawa2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="capucciono" />
+                android:text="cappucio" />
 
             <RadioButton
                 android:id="@+id/kawa3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="latte" />
+                android:text="late" />
 
         </RadioGroup>
 
 
+        <ImageView
+            android:id="@+id/my_image_view"
+            android:layout_width="200dp"
+            android:layout_height="197dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:contentDescription="old Kotlin"
+            android:scaleType="fitCenter"
+            android:src="@drawable/capuccino" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="mleko"
-        />
+    </LinearLayout>
 
-    <CheckBox
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:background="#834832"
+        android:padding="10dp"
+        android:text="Dodatki"
+        android:textAlignment="center"
+        android:textColor="#D5C8C8"
+        android:textSize="21dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="cukier"
-    />
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:background="#EBC0B6"
+            android:text="mleko"
+
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EBC0B6"
+            android:text="cukier" />
+
+    </LinearLayout>
+
 </LinearLayout>
