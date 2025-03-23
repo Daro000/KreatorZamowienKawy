@@ -1,6 +1,8 @@
 package com.example.kreatorzamowienkawy
 
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.RadioGroup
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -17,6 +19,19 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val radioGroup = findViewById<RadioGroup>(R.id.rkawy)
+        val imageView = findViewById<ImageView>(R.id.my_image_view)
+
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            val imageRes = when (checkedId) {
+                R.id.kawa1 -> R.drawable.espresso
+                R.id.kawa2 -> R.drawable.capuccino
+                R.id.kawa3 -> R.drawable.latte
+                else -> R.drawable.capuccino
+            }
+            imageView.setImageResource(imageRes)
         }
 
         val myTextView = findViewById<TextView>(R.id.ilosc)
