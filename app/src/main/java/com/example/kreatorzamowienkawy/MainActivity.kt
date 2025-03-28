@@ -1,10 +1,13 @@
 package com.example.kreatorzamowienkawy
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.RadioGroup
 import android.widget.SeekBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -50,5 +53,33 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+
+        val button = findViewById<Button>(R.id.button_zamowienie)
+
+        button.setOnClickListener {
+
+            val wybranakawaId = radioGroup.checkedRadioButtonId
+            val wybranakawa = when (wybranakawaId) {
+                R.id.kawa1 -> "Espresso"
+                R.id.kawa2 -> "Cappuccino"
+                R.id.kawa3 -> "Latte"
+                else -> "None"
+            }
+
+
+            val mleko = findViewById<CheckBox>(R.id.mleko).isChecked
+            val cukier = findViewById<CheckBox>(R.id.cukier).isChecked
+            val ilosc_kaw = mySeekBar.progress
+
+
+            val zamowienie = "Kawa: ${wybranakawa}, mleko? :${mleko} , cukier? :${cukier}, ilosc kaw : ${ilosc_kaw}"
+
+
+            val myTextView1 = findViewById<TextView>(R.id.zamowienie)
+
+            myTextView1.text = zamowienie
+
+
+        }
     }
 }
